@@ -1,0 +1,17 @@
+<!--pages/first/first.wxml-->
+<view class="base" style="background-image: url(/utils/images/bgc.png);">
+ <view class="img1" style="background-image: url(/utils/images/img1.png);">
+ </view>
+ <view class="text1">
+  拍一拍，食品健康就知道
+ </view>
+ <button id="btn1" class="btn">上传图片</button>
+ <button id="btn2" class="btn" type="primary" bindtap="takePhoto">拍照上传</button>
+ <view class="text2">
+  上传食品配料信息
+ </view>
+ <view class="text3">
+  获取食品分析报告
+ </view>
+ <view class="img2" style="background-image: url(/utils/images/img2.png);"></view>
+</view>

@@ -1,0 +1,62 @@
+/* pages/first/first.wxss */
+.base {
+	position : absolute;
+	width : 100%;
+	height : 100%;
+}
+.img1{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top:0;
+  background-size:cover;
+  left:0;
+}
+.text1{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 30%;
+  font-family: "Arial Narrow Bold", "Arial Narrow", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 25px;
+  color: #D9001B;
+}
+.btn{
+  background-color: rgba(245, 154, 35, 1);
+  border-radius: 8px;
+  color: white;
+}
+#btn1{
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+}
+#btn2{
+  position: absolute;
+  top: 52%;
+  left: 0;
+  right: 0;
+}
+.text2{
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+  font-size: 20px;
+}
+.text3{
+  position: absolute;
+  left: 5%;
+  bottom: 12%;
+  font-size: 20px;
+}
+.img2{
+  position: absolute;
+  width: 70%;
+  height: 30%;
+  bottom: 10%;
+  right: 0%;
+  background-size:cover;
+}
