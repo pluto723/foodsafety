@@ -103,9 +103,12 @@ function initChart(canvas, width, height, dpr) {
       itemStyle:{
         normal:{
               color: function(nodes) {
-                return nodes.data.color    //获取具体的参数
+                return nodes.data.color    //设置节点颜色
               },
             }
+      },
+      symbolSize: function (value, params) {//改变节点大小
+        return params.data.val*3
       },
       label: { // 节点label设置
         show: true,
@@ -123,9 +126,15 @@ function initChart(canvas, width, height, dpr) {
       },
       nodes:nodes,  // 节点数据列表
       links:links, // 关系数据列表
-      symbolSize:30, 
     }]
   }
   chart.setOption(option);
+  chart.on('click',function(params){
+    if(params.dataType == 'node'){
+      if(params.name == 'AD钙奶'){
+        console.log('1')
+      }
+    }
+  })
   return chart;
 }
