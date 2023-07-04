@@ -56,11 +56,18 @@ function initChart(canvas, width, height, dpr) {
     {'source': '维生素A', 'target': '夜盲症', 'colorkey': 'blue', 'relation': '预防'}, 
     {'source': '维生素A', 'target': '呼吸道炎症', 'colorkey': 'blue', 'relation': '预防'}
   ]
+  //定义连线的颜色
+  links.forEach(link => {
+    link.lineStyle = {
+      normal: {
+        color: link.colorkey
+      }
+    };
+  });
   // 显示Echarts图表类型信息，可以去Echarts官网复制粘贴
   let option = {
     tooltip: {
       show: true,
-      formatter: "{b}"
     },
     series: [{
       type: 'graph', // 声明绘制关系图
@@ -114,12 +121,6 @@ function initChart(canvas, width, height, dpr) {
               },
             }
       },
-      lineStyle:{
-        normal:{
-          color:'red'
-          }
-      },
-      
       symbolSize: function (value, params) {//改变节点大小
         return params.data.val*3
       },
@@ -148,8 +149,6 @@ function initChart(canvas, width, height, dpr) {
   chart.setOption(option);
   chart.on('click',function(nodes){
     console.log(nodes.data.name)
-    console.log(Page)
-    change(nodes.data.name)
   })
   return chart;
 }
