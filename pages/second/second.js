@@ -6,7 +6,13 @@ Page({
   data: {
     ec: {
       onInit: initChart
-    }
+    },
+    show:'abc'
+  },
+  change:function(a){
+    this.setData({
+      show:a
+    })
   }
 })
 
@@ -140,5 +146,10 @@ function initChart(canvas, width, height, dpr) {
     }],
   }
   chart.setOption(option);
+  chart.on('click',function(nodes){
+    console.log(nodes.data.name)
+    console.log(Page)
+    change(nodes.data.name)
+  })
   return chart;
 }

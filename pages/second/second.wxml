@@ -15,6 +15,7 @@
       配料特性
     </view>
     <view class="features">
+      {{show}}
     </view>
   </view>
   <view class="echarts">
