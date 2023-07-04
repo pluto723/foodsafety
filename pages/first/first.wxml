@@ -1,7 +1,6 @@
 <!--pages/first/first.wxml-->
-<view class="base" style="background-image: url(/utils/images/bgc.png);">
- <view class="img1" style="background-image: url(/utils/images/imgone.png);">
- </view>
+<image class="base" src="/utils/images/bgc.png">
+  <image src="/utils/images/imgone.png" class="img1"></image>
  <view class="text1">
   拍一拍，食品健康就知道
  </view>
@@ -13,5 +12,5 @@
  <view class="text3">
   获取食品分析报告
  </view>
- <view class="img2" style="background-image: url(/utils/images/imgtwo.png);"></view>
-</view>
+ <image class="img2" src="/utils/images/imgtwo.png"></image>
+</image>

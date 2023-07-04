@@ -2,18 +2,13 @@
 <view class="base" style="background-image: url(/utils/images/bgc.png);">
   <view class="content">
     <view class="text1">
-    食品配料知识图谱
-  </view>
-  <view class="ball" id="ball1" style="background-image: url(/utils/images/ball.png);">
-  </view>
-  <view class="ball" id="ball2" style="background-image: url(/utils/images/ball.png);">
-  </view>
-  <view class="ball" id="ball3" style="background-image: url(/utils/images/ball.png);">
-  </view>
-  <view class="ball" id="ball4" style="background-image: url(/utils/images/ball.png);">
-  </view>
-  <view class="ball" id="ball5" style="background-image: url(/utils/images/ball.png);">
-  </view>
+      食品配料知识图谱
+    </view>
+  <image class="ball" id="ball1" src="/utils/images/ball.png"></image>
+  <image class="ball" id="ball2" src="/utils/images/ball.png"></image>
+  <image class="ball" id="ball3" src="/utils/images/ball.png"></image>
+  <image class="ball" id="ball4" src="/utils/images/ball.png"></image>
+  <image class="ball" id="ball5" src="/utils/images/ball.png"></image>
   </view>
   <view class="information">
     <view class="text2">
