@@ -64,6 +64,7 @@ function initChart(canvas, width, height, dpr) {
       focusNodeAdjacency: true, // 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点
       edgeSymbol: ['', 'arrow'],
       cursor: 'pointer',
+      zoom:0.7,//缩放比列（默认为1）
       emphasis: { //  鼠标悬浮高亮图形的样式
         itemStyle: {
           borderColor: 'black',
@@ -107,6 +108,12 @@ function initChart(canvas, width, height, dpr) {
               },
             }
       },
+      lineStyle:{
+        normal:{
+          color:'red'
+          }
+      },
+      
       symbolSize: function (value, params) {//改变节点大小
         return params.data.val*3
       },
@@ -122,19 +129,16 @@ function initChart(canvas, width, height, dpr) {
         edgeLength: 160, // 边的两个节点之间的距离
         layoutAnimation: true, // 显示布局的迭代动画
       },
-      events:{
+      events: {
+        // 点击事件
+        click: function(params) {
+          console.log(params.data.name)
+        }
       },
       nodes:nodes,  // 节点数据列表
       links:links, // 关系数据列表
-    }]
+    }],
   }
   chart.setOption(option);
-  chart.on('click',function(params){
-    if(params.dataType == 'node'){
-      if(params.name == 'AD钙奶'){
-        console.log('1')
-      }
-    }
-  })
   return chart;
 }
