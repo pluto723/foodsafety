@@ -136,19 +136,19 @@ function initChart(canvas, width, height, dpr) {
         edgeLength: 160, // 边的两个节点之间的距离
         layoutAnimation: true, // 显示布局的迭代动画
       },
-      events: {
-        // 点击事件
-        click: function(params) {
-          console.log(params.data.name)
-        }
-      },
       nodes:nodes,  // 节点数据列表
       links:links, // 关系数据列表
     }],
   }
   chart.setOption(option);
   chart.on('click',function(nodes){
-    console.log(nodes.data.name)
+    let page = getCurrentPages().pop();
+    if (page == undefined || page == null) {
+      return;
+    }
+    page.setData({
+      show:nodes.data.name
+    });
   })
   return chart;
 }
