@@ -1,2 +1,13 @@
-<!--pages/third/third.wxml-->
-<text>pages/third/third.wxml</text>
+<image class="base" src="/utils/images/bgc.png">
+  <view id="text1">
+    健康影响评估
+  </view>
+  <button id="btn1">配料选择</button>
+  <image id="img1" src="/utils/images/person.png"></image>
+  <view class="content">
+    <view id="text2">
+      危害详情
+    </view>
+    <view class="show"></view>
+  </view>
+</image>

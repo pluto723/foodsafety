@@ -1,5 +1,5 @@
 <!--pages/second/second.wxml-->
-<view class="base" style="background-image: url(/utils/images/bgc.png);">
+<image class="base" src="/utils/images/bgc.png">
   <view class="content">
     <view class="text1">
       食品配料知识图谱
@@ -18,7 +18,8 @@
       {{show}}
     </view>
   </view>
+  <button id="btn1">全屏显示</button>
   <view class="echarts">
     <ec-canvas id="echarts" canvas-id="echarts" ec="{{ec}}"></ec-canvas>
   </view>
-</view>
+</image>

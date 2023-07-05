@@ -5,9 +5,15 @@
 	height : 100%;
 }
 .text1{
+  position: absolute;
   text-align: center;
-  font-weight: bold;
+  width: 100%;
+  top: 2%;
+  font-family: "Arial Narrow Bold", "Arial Narrow", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 20px;
+  color:black;
 }
 .ball{
   position: absolute;
@@ -74,4 +80,13 @@
 #echarts{
   width: 100%;
   height: 100%;
+}
+#btn1{
+  position: absolute;
+  right: 0;
+  top: 76%;
+  width: 5%;
+  font-size: 12px;
+  padding: 3px;
+  background-color:skyblue;
 }
