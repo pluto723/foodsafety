@@ -1,16 +1,19 @@
 // pages/first/first.js
 Page({
-  takePhoto(e) {
-    console.log('1')
-  },
-
   /**
    * 页面的初始数据
    */
   data: {
 
   },
-
+  takePhoto: function () {
+    wx.chooseMedia({
+      count: 1,
+      mediaType: ['image'],
+      sourceType: ['album', 'camera'],
+      camera: 'back',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -2,7 +2,8 @@
   "pages":[
     "pages/first/first",
     "pages/second/second",
-    "pages/third/third"
+    "pages/third/third",
+    "pages/full/full"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,0 +1,3 @@
+<view class="echarts">
+  <ec-canvas id="echarts" canvas-id="echarts" ec="{{ec}}" bindtap="back"></ec-canvas>
+</view>

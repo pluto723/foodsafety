@@ -18,7 +18,7 @@
       {{show}}
     </view>
   </view>
-  <button id="btn1">全屏显示</button>
+  <button id="btn1" bindtap="fullShow">全屏显示</button>
   <view class="echarts">
     <ec-canvas id="echarts" canvas-id="echarts" ec="{{ec}}"></ec-canvas>
   </view>

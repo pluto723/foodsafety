@@ -7,13 +7,6 @@ Page({
     ec: {
       onInit: initChart
     },
-    show:''
-  },
-  fullShow:function () {
-    console.log('1')
-    this.pageRouter.navigateTo({
-      url: '../full/full'
-    })
   }
 })
 
@@ -142,17 +135,5 @@ function initChart(canvas, width, height, dpr) {
     }],
   }
   chart.setOption(option);
-  chart.on('click',function(nodes){
-    if (nodes.data.name == undefined) {
-      return;
-    }
-    let page = getCurrentPages().pop();
-    if (page == undefined || page == null) {
-      return;
-    }
-    page.setData({
-      show:nodes.data.name+'的特性'
-    });
-  })
   return chart;
 }
