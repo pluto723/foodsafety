@@ -16,13 +16,7 @@ function initChart(canvas, width, height, dpr) {
     height: height,
     devicePixelRatio: dpr
   })
-  wx.request({
-    url: '/utils/images/Veins_Medical_Diagram_clip_art.svg',
-    success:function(res){
-      var svg = res.data
-      echarts.registerMap('organ_diagram', { svg: svg });
-    }
-  })
+  echarts.registerMap('organ_diagram',svgImg);
       const option = {
         tooltip: {},
         geo: {
