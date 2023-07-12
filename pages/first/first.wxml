@@ -1,16 +1,24 @@
 <!--pages/first/first.wxml-->
-<image class="base" src="/utils/images/bgc.png">
-  <image src="/utils/images/imgone.png" class="img1"></image>
- <view class="text1">
-  拍一拍，食品健康就知道
- </view>
- <button id="btn1" class="btn">上传图片</button>
- <button id="btn2" class="btn" type="primary" bindtap="takePhoto">拍照上传</button>
- <view class="text2">
-  上传食品配料信息
- </view>
- <view class="text3">
-  获取食品分析报告
- </view>
- <image class="img2" src="/utils/images/imgtwo.png"></image>
+<image class="base" src="/utils/images/bg.png">
+  <image id="img1" src="/utils/images/img1.png" mode='aspectFit'></image>
+  <view id="text1">WELCOME</view>
+  <view id="content">
+    <view class="saying">Do meditation.Stay focused.</view>
+    <view class="saying">Live with a healthy life.</view>
+  </view>
+  <button type="default" id="btn1" bindtap="takePhoto">上传图片</button>
+  <view class="bar">
+    <view class="item">
+      <image class="BarImg" src="/utils/images/item1.png" mode="aspectFit"></image>
+      <view class="BarText">扫码界面</view>
+    </view>
+    <view class="item" bindtap="PageTwo">
+      <image class="BarImg" src="/utils/images/item2.png" mode="aspectFit"></image>
+      <view class="BarText">知识图谱</view>
+    </view>
+    <view class="item" bindtap="PageThree">
+      <image class="BarImg" src="/utils/images/item3.png" mode="aspectFit"></image>
+      <view class="BarText">健康评估</view>
+    </view>
+  </view>
 </image>

@@ -1,5 +1,6 @@
 import * as echarts from '../../ec-canvas/echarts';
-
+import ingredient from '../../utils/json/ingredient'
+import quality from '../../utils/json/quality'
 let chart = null;
 
 Page({
@@ -7,23 +8,17 @@ Page({
     ec: {
       onInit: initChart
     },
-    show:''
+    show:'',
+    ingredient:ingredient.ingredient
   },
   fullShow:function () {
-    console.log('1')
     this.pageRouter.navigateTo({
       url: '../full/full'
     })
   },
   onLoad: function (options) {
-    var that =this
-    wx.request({
-      url: 'http://127.0.0.1:3000/',
-      success:function(res){
-        console.log(res.data)
-        // that.setData({names:res.data})
-      }
-    })
+    var ingre = ingredient.ingredient
+    console.log(ingre[0])
   }
 })
 

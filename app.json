@@ -8,26 +8,9 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "食安心",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "tabBar": {
-    "selectedColor":"#33a3dc", 
-    "list": [
-      {
-        "pagePath": "pages/first/first",
-        "text": "扫码界面"
-      },
-      {
-        "pagePath": "pages/second/second",
-        "text": "知识图谱"
-      },
-      {
-        "pagePath": "pages/third/third",
-        "text": "健康评估"
-      }
-    ]
-  }
+  "sitemapLocation": "sitemap.json"
 }
