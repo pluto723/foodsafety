@@ -14,6 +14,16 @@ Page({
     this.pageRouter.navigateTo({
       url: '../full/full'
     })
+  },
+  onLoad: function (options) {
+    var that =this
+    wx.request({
+      url: 'http://127.0.0.1:3000/',
+      success:function(res){
+        console.log(res.data)
+        // that.setData({names:res.data})
+      }
+    })
   }
 })
 
