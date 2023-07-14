@@ -1,25 +1,27 @@
-<!--pages/second/second.wxml-->
-<image class="base" src="/utils/images/bgc.png">
-  <view class="content">
-    <view class="text1">
-      食品配料知识图谱
-    </view>
-  <image class="ball" id="ball1" src="/utils/images/ball.png"></image>
-  <image class="ball" id="ball2" src="/utils/images/ball.png"></image>
-  <image class="ball" id="ball3" src="/utils/images/ball.png"></image>
-  <image class="ball" id="ball4" src="/utils/images/ball.png"></image>
-  <image class="ball" id="ball5" src="/utils/images/ball.png"></image>
+<view class="base">
+  <view class="title">
+    <view id="text1">Welcome!</view>
+    <view id="text2">这里是食品配料知识图谱</view>
+    <image id="img1" src="/utils/images/img1.png" mode="aspectFit"></image>
   </view>
-  <view class="information">
-    <view class="text2">
-      配料特性
-    </view>
-    <view class="features">
-      {{show}}
-    </view>
+  <view id="information">
+    <image id="img2" src="/utils/images/img2.png" mode="aspectFit"/>
   </view>
-  <button id="btn1" bindtap="fullShow">全屏显示</button>
   <view class="echarts">
     <ec-canvas id="echarts" canvas-id="echarts" ec="{{ec}}"></ec-canvas>
   </view>
-</image>
+  <view class="bar">
+    <view class="item" bindtap="PageOne">
+      <image class="BarImg" src="/utils/images/item1.png" mode="aspectFit"></image>
+      <view class="BarText">扫码界面</view>
+    </view>
+    <view class="item" bindtap="PageTwo">
+      <image class="BarImg" src="/utils/images/item2.png" mode="aspectFit"></image>
+      <view class="BarText">知识图谱</view>
+    </view>
+    <view class="item" bindtap="PageThree">
+      <image class="BarImg" src="/utils/images/item3.png" mode="aspectFit"></image>
+      <view class="BarText">健康评估</view>
+    </view>
+  </view>
+</view>

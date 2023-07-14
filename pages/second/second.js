@@ -1,6 +1,4 @@
 import * as echarts from '../../ec-canvas/echarts';
-import ingredient from '../../utils/json/ingredient'
-import quality from '../../utils/json/quality'
 let chart = null;
 
 Page({
@@ -9,7 +7,21 @@ Page({
       onInit: initChart
     },
     show:'',
-    ingredient:ingredient.ingredient
+  },
+  PageOne:function(){
+    this.pageRouter.navigateTo({
+      url: '../first/first'
+    })
+  },
+  PageTwo:function(){
+    this.pageRouter.navigateTo({
+      url: '../second/second'
+    })
+  },
+  PageThree:function(){
+    this.pageRouter.navigateTo({
+      url: '../third/third'
+    })
   },
   fullShow:function () {
     this.pageRouter.navigateTo({
@@ -17,8 +29,6 @@ Page({
     })
   },
   onLoad: function (options) {
-    var ingre = ingredient.ingredient
-    console.log(ingre[0])
   }
 })
 

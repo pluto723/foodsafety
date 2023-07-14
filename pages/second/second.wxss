@@ -1,92 +1,84 @@
-/* pages/second/second.wxss */
-.base {
-	position : absolute;
-	width : 100%;
-	height : 100%;
-}
-.text1{
+.base{
   position: absolute;
-  text-align: center;
   width: 100%;
-  top: 2%;
-  font-family: "Arial Narrow Bold", "Arial Narrow", "Arial", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  height: 100%;
+  background-color: #253334;
+}
+#text1{
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  top: 5%;
+  font-family: 'Times New Roman', Times, serif;
+  left: 5%;
+}
+#text2{
+  position: absolute;
   font-size: 20px;
-  color:black;
+  color:lightgray;
+  top: 12%;
+  font-family: 'Times New Roman', Times, serif;
+  left: 5%;
 }
-.ball{
-  position: absolute;
-  width: 20%;
-  height: 14%;
-}
-#ball1{
-  position: absolute;
-  left: 0%;
-  top: 3%;
-  background-size:cover;
-}
-#ball2{
-  position: absolute;
-  left: 20%;
-  top: 6%;
-  background-size:cover;
-}
-#ball3{
+#img1{
   position: absolute;
   left: 40%;
-  top: 9%;
-  background-size:cover;
+  top: 0%;
+  height: 20%;
 }
-#ball4{
+#information{
   position: absolute;
-  left: 60%;
-  top: 12%;
-  background-size:cover;
-}
-#ball5{
-  position: absolute;
-  left: 80%;
-  top: 15%;
-  background-size:cover;
-}
-.information{
-  position: absolute;
-  width: 100%;
   height: 30%;
-  top:30%;
-}
-.text2{
-  text-align: center;
-  font-size: 17px;
-}
-.features{
-  border: 2px solid lightgray;
-  position: absolute;
-  top: 15%;
-  width: 40%;
-  height: 85%;
-  margin: auto;
+  width: 90%;
+  background: white;
+  top: 20%;
   left: 0;
   right: 0;
-  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+}
+#img2{
+  position: relative;
+  left: 40%;
+  height: 35%;
+  top: 65%;
 }
 .echarts{
   position: absolute;
-  width: 100%;
-  height: 37%;
-  bottom: 0;
-}
-#echarts{
-  width: 100%;
-  height: 100%;
-}
-#btn1{
-  position: absolute;
+  bottom: 15%;
+  height: 30%;
+  width: 90%;
+  background-color: white;
+  left: 0;
   right: 0;
-  top: 56%;
-  width: 20%;
-  font-size: 12px;
-  padding: 3px;
-  background-color:skyblue;
+  margin: auto;
+  border-radius: 20px;
+}
+.bar{
+  position: absolute;
+  bottom: 2%;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+}
+.item{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.BarImg{
+  position: relative;
+  width: 60%;
+  height: 60%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.BarText{
+  text-align: center;
+  color: #d0dfdb;
 }
