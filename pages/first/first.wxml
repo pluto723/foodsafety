@@ -1,12 +1,17 @@
 <!--pages/first/first.wxml-->
 <image class="base" src="/utils/images/bg.png">
-  <image id="img1" src="/utils/images/img1.png" mode='aspectFit'></image>
-  <view id="text1">WELCOME</view>
+  <!-- <image id="img1" src="/utils/images/img1.png" mode='aspectFit'></image> -->
+  <!-- <view id="text1">WELCOME</view> -->
   <view id="content">
-    <view class="saying">Do meditation.Stay focused.</view>
-    <view class="saying">Live with a healthy life.</view>
+    <!-- <view class="saying">Stay focused.</view> -->
+    <view class="saying" id="left">Eat what you</view>
+    <view class="border">
+      <view class="saying" id="see" bindtap="takePhoto">See</view>
+    </view>
+    <!-- <button class="btn1" id="see">see</button> -->
+    <view class="saying" id="right">what you eat</view>
   </view>
-  <button type="default" id="btn1" bindtap="takePhoto">上传图片</button>
+  <!-- <button type="default" id="btn1" bindtap="takePhoto">see</button> -->
   <view class="bar">
     <view class="item">
       <image class="BarImg" src="/utils/images/item1.png" mode="aspectFit"></image>

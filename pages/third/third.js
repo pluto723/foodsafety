@@ -20,6 +20,10 @@ Page({
     const { loadingSvg } = require('./loading.svg')
     const svgImg = loadingSvg()
     this.setData({svgImg})
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#253334',
+      })
   },
 })
 

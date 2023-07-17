@@ -8,10 +8,10 @@
   max-width: 100%;
   max-height: 100%;
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 50%;
+  height: 70%;
 }
 #text1{
   position: absolute;
@@ -40,7 +40,30 @@
   text-align: center;
   color: white;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
+  font-size: 30px;
+}
+#left{
+  right: 25%;
+  border-top:solid;
+  border-right:solid;
+  border-radius: 30%;
+}
+#right{
+  left: 25%;
+  border-bottom:solid;
+  border-left:solid ;
+  border-radius: 30%;
+}
+#see{
+  font-size: 40px;
+}
+.border{
+  border: solid;
+  width: 40%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #d0dfdb;
 }
 #btn1{
   position: absolute;

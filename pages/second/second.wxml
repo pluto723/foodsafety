@@ -2,12 +2,14 @@
   <view class="title">
     <view id="text1">Welcome!</view>
     <view id="text2">这里是食品配料知识图谱</view>
-    <image id="img1" src="/utils/images/img1.png" mode="aspectFit"></image>
+    <image id="img1" src="/utils/images/icon.png" mode="aspectFit"></image>
   </view>
   <view id="information">
+    {{show}}
     <image id="img2" src="/utils/images/img2.png" mode="aspectFit"/>
   </view>
   <view class="echarts">
+    <image src="/utils/images/full.png" mode="aspectFit" id="full" bindtap="fullShow"></image>
     <ec-canvas id="echarts" canvas-id="echarts" ec="{{ec}}"></ec-canvas>
   </view>
   <view class="bar">
