@@ -5,7 +5,7 @@
     <image id="img1" src="/utils/images/icon.png" mode="aspectFit"></image>
   </view>
   <view id="information">
-    {{show}}
+    <view id="text3">{{show}}</view>
     <image id="img2" src="/utils/images/img2.png" mode="aspectFit"/>
   </view>
   <view class="echarts">

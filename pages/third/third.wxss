@@ -33,7 +33,14 @@
   margin: auto;
   border-radius: 20px;
 }
-
+.list{
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  font-size: 20px;
+  color:gray;
+  font-family: 'Times New Roman', Times, serif;
+}
 #person{
   position: absolute;
   width: 100%;
@@ -52,7 +59,6 @@
   margin: auto;
   border-radius: 20px;
 }
-
 .bar{
   position: absolute;
   bottom: 2%;

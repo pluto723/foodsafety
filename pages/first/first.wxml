@@ -1,17 +1,26 @@
 <!--pages/first/first.wxml-->
 <image class="base" src="/utils/images/bg.png">
-  <!-- <image id="img1" src="/utils/images/img1.png" mode='aspectFit'></image> -->
-  <!-- <view id="text1">WELCOME</view> -->
-  <view id="content">
-    <!-- <view class="saying">Stay focused.</view> -->
-    <view class="saying" id="left">Eat what you</view>
-    <view class="border">
-      <view class="saying" id="see" bindtap="takePhoto">See</view>
+  <view class="title">
+    <view >
+      <view id="pinyin1" class="pinyin">shi</view>
+      <view id="pinyin2" class="pinyin">suo</view>
+      <view id="pinyin3" class="pinyin">suo</view>
+      <view id="pinyin4" class="pinyin">shi</view>
     </view>
-    <!-- <button class="btn1" id="see">see</button> -->
-    <view class="saying" id="right">what you eat</view>
+    <view id="column-right"></view>
+    <view id="left">食所</view>
+    <view class="btn" bindtap="takePhoto">
+      <view id="bg"></view>
+      <view id="btn1">见</view>
+    </view>
+    <view id="column-left"></view>
+    <view id="right">所食</view>
   </view>
-  <!-- <button type="default" id="btn1" bindtap="takePhoto">see</button> -->
+  <view class="btn">
+    <view id="btnText">上传图片</view>
+    <button id="btn2" bindtap="takePhoto">
+    </button>
+  </view>
   <view class="bar">
     <view class="item">
       <image class="BarImg" src="/utils/images/item1.png" mode="aspectFit"></image>

@@ -3,7 +3,9 @@
     "pages/first/first",
     "pages/second/second",
     "pages/third/third",
-    "pages/full/full"
+    "pages/full/full",
+    "pages/loading/loading"
+
   ],
   "window":{
     "backgroundTextStyle":"light",

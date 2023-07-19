@@ -40,10 +40,11 @@ Page({
       success:function(res){
         that.setData({
           nodes:res.data[0],
-          links:res.data[1]
+          links:res.data[1],
+          information:res.data[2]
         })
       }
-    })    
+    })      
   },
 })
 // 初始化图表函数
@@ -151,9 +152,16 @@ function initChart(canvas, width, height, dpr) {
     if (page == undefined || page == null) {
       return;
     }
-    page.setData({
-      show:nodes.data.name+'的特性'
-    });
+    // page.setData({
+    //   show:nodes.data.name+'的特性'
+    // });
+    for (var index in page.data.information) {
+      if (page.data.information[index][0] == nodes.data.name) {
+        page.setData({
+          show:page.data.information[index][1]
+        })        
+      }
+    }
   })
   return chart;
 }

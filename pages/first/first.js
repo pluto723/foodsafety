@@ -4,7 +4,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-
   },
   takePhoto: function () {
     wx.chooseMedia({
@@ -12,6 +11,14 @@ Page({
       mediaType: ['image'],
       sourceType: ['album', 'camera'],
       camera: 'back',
+      success:res =>{
+        this.showLoading()
+      }
+    })
+  },
+  showLoading: function() {
+    this.pageRouter.navigateTo({
+      url: '../loading/loading'
     })
   },
   PageTwo:function(){
@@ -30,7 +37,7 @@ Page({
   onLoad(options) {
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
-      backgroundColor: '#a5b6a5',
+      backgroundColor: '#131509',
     })
   }
 })

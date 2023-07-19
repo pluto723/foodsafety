@@ -4,6 +4,11 @@
     <view id="text2">这里是食品配料健康评估</view>
   </view>
   <view class="container">
+    <view class="list">
+      <block wx:for="{{list}}" wx:key="index">
+        <view>{{item}}</view>
+      </block>
+    </view>
     <image src="{{svgImg}}" id="person" mode="aspectFit"/>
   </view>
   <view class="information">

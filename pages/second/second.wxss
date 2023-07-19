@@ -43,14 +43,19 @@
   padding-left:2%;
   padding-right: 2%;
 }
-
+#text3{
+  height: 70%;
+  overflow:auto;
+}
 #img2{
   position: absolute;
-  left: 40%;
-  height: 35%;
-  top: 65%;
+  left: 70%;
+  height: 30%;
+  width: 30%;
+  top: 70%;
 }
 #full{
+  display: inline;
   position: absolute;
   bottom: 104%;
   left: 92%;
