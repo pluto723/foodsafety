@@ -1,5 +1,6 @@
 import * as echarts from '../../ec-canvas/echarts';
 let chart = null;
+const app = getApp()
 
 Page({
   data: {
@@ -9,17 +10,17 @@ Page({
     show:'',
   },
   PageOne:function(){
-    this.pageRouter.navigateTo({
+    wx.redirectTo({
       url: '../first/first'
     })
   },
   PageTwo:function(){
-    this.pageRouter.navigateTo({
+    wx.redirectTo({
       url: '../second/second'
     })
   },
   PageThree:function(){
-    this.pageRouter.navigateTo({
+    wx.redirectTo({
       url: '../third/third'
     })
   },
@@ -29,23 +30,15 @@ Page({
     })
   },
   onLoad(options) {
-    var that = this
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
       backgroundColor: '#253334',
-    }),
-    wx.request({
-      url: 'http://127.0.0.1:2020/content',
-      method:'POST',
-      success:function(res){
-        that.setData({
-          nodes:res.data[0],
-          links:res.data[1],
-          information:res.data[2]
-        })
-      }
-    })      
+    })
+    console.log(app.globalData.links)
   },
+  onShow(){
+    wx.hideHomeButton()
+  }
 })
 // 初始化图表函数
 function initChart(canvas, width, height, dpr) {
@@ -56,9 +49,8 @@ function initChart(canvas, width, height, dpr) {
   })
 
   canvas.setChart(chart)
-  let page = getCurrentPages().pop();
-  let nodes = page.data.nodes
-  let links = page.data.links
+  let nodes = app.globalData.nodes
+  let links = app.globalData.links
   //定义连线的颜色
   links.forEach(link => {
     link.lineStyle = {
@@ -152,13 +144,10 @@ function initChart(canvas, width, height, dpr) {
     if (page == undefined || page == null) {
       return;
     }
-    // page.setData({
-    //   show:nodes.data.name+'的特性'
-    // });
-    for (var index in page.data.information) {
-      if (page.data.information[index][0] == nodes.data.name) {
+    for (var index in app.globalData.information) {
+      if (app.globalData.information[index][0] == nodes.data.name) {
         page.setData({
-          show:page.data.information[index][1]
+          show:app.globalData.information[index][1]
         })        
       }
     }

@@ -10,6 +10,7 @@ Page({
     })
   },
   onShow(options) {
+    wx.hideHomeButton()
     var that = this
     wx.setNavigationBarColor({
       frontColor: '#ffffff',

@@ -17,17 +17,17 @@ Page({
     })
   },
   showLoading: function() {
-    this.pageRouter.navigateTo({
+    wx.redirectTo({
       url: '../loading/loading'
     })
   },
   PageTwo:function(){
-    this.pageRouter.navigateTo({
+    wx.redirectTo({
       url: '../second/second'
     })
   },
   PageThree:function(){
-    this.pageRouter.navigateTo({
+    wx.redirectTo({
       url: '../third/third'
     })
   },
@@ -39,5 +39,8 @@ Page({
       frontColor: '#ffffff',
       backgroundColor: '#131509',
     })
+  },
+  onShow(){
+    wx.hideHomeButton()
   }
 })

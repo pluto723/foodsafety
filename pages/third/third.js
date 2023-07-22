@@ -3,17 +3,17 @@ Page({
     list:[]
   },
   PageOne:function(){
-    this.pageRouter.navigateTo({
+    wx.redirectTo({
       url: '../first/first'
     })
   },
   PageTwo:function(){
-    this.pageRouter.navigateTo({
+    wx.redirectTo({
       url: '../second/second'
     })
   },
   PageThree:function(){
-    this.pageRouter.navigateTo({
+    wx.redirectTo({
       url: '../third/third'
     })
   },
@@ -36,6 +36,9 @@ Page({
       }
     })
   },
+  onShow(){
+    wx.hideHomeButton()
+  }
 })
 
 
