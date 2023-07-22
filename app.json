@@ -4,8 +4,8 @@
     "pages/second/second",
     "pages/third/third",
     "pages/full/full",
-    "pages/loading/loading"
-
+    "pages/loading/loading",
+    "pages/bar/bar"
   ],
   "window":{
     "backgroundTextStyle":"light",

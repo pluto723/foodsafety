@@ -1,0 +1,28 @@
+.bar{
+  position: absolute;
+  bottom: 2%;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+}
+.item{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.BarImg{
+  position: relative;
+  width: 60%;
+  height: 60%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.BarText{
+  text-align: center;
+  color: #d0dfdb;
+}

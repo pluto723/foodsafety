@@ -9,21 +9,6 @@ Page({
     },
     show:'',
   },
-  PageOne:function(){
-    wx.redirectTo({
-      url: '../first/first'
-    })
-  },
-  PageTwo:function(){
-    wx.redirectTo({
-      url: '../second/second'
-    })
-  },
-  PageThree:function(){
-    wx.redirectTo({
-      url: '../third/third'
-    })
-  },
   fullShow:function () {
     this.pageRouter.navigateTo({
       url: '../full/full'
@@ -34,7 +19,6 @@ Page({
       frontColor: '#ffffff',
       backgroundColor: '#253334',
     })
-    console.log(app.globalData.links)
   },
   onShow(){
     wx.hideHomeButton()

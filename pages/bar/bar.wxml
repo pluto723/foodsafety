@@ -1,0 +1,14 @@
+<view class="bar">
+  <view class="item" bindtap="PageOne">
+    <image class="BarImg" src="/utils/images/item1.png" mode="aspectFit"></image>
+    <view class="BarText">扫码界面</view>
+  </view>
+  <view class="item" bindtap="PageTwo">
+    <image class="BarImg" src="/utils/images/item2.png" mode="aspectFit"></image>
+    <view class="BarText">知识图谱</view>
+  </view>
+  <view class="item" bindtap="PageThree">
+    <image class="BarImg" src="/utils/images/item3.png" mode="aspectFit"></image>
+    <view class="BarText">健康评估</view>
+  </view>
+</view>
