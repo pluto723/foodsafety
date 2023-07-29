@@ -110,10 +110,14 @@
   font-size: 50px;
   color: white;
   text-align: center;
-  top: 40%;
+  top: 41%;
   border-radius: 50%;
   height: 18%;
   width: 25%;
+  transform: scale(1);
+}
+#btn1:active{
+  transform: scale(0.95);
 }
 #bg{
   position: absolute;
@@ -128,7 +132,11 @@
   background-color: lightgray;
   height: 18%;
   width: 25%;
-  opacity: 0.50;  
+  opacity: 0.50;
+  transform: scale(1);  
+}
+#bg:active{
+  transform: scale(0.95);
 }
 #btn2{
   position: absolute;
@@ -140,6 +148,10 @@
   border-radius: 25px;
   opacity: 0.2;  
   filter: alpha(opacity=20);
+  transform: scale(1);
+}
+#btn2:active{
+  transform: scale(0.95);
 }
 #btnText{
   position: absolute;

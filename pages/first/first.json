@@ -1,10 +1,5 @@
 {
   "usingComponents": {
     "bar":"../bar/bar"
-  },
-  "permissions": {
-    "scope.camera": {
-      "desc": "需要使用相机功能"
-    }
   }
 }

@@ -81,15 +81,23 @@
   border-radius: 25px;
   opacity: 0.2;  
   filter: alpha(opacity=20);
+  transform: scale(1);
 }
 #btnText{
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
-  bottom: 11%;
+  bottom: 11.5%;
   width: 30%;
   text-align: center;
   font-size: 23px;
   color: white;
+  transform: scale(1);
+}
+#btn2:active{
+  transform: scale(0.95);
+}
+#btnText:active{
+  transform: scale(0.95);
 }

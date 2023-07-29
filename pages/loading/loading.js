@@ -1,3 +1,4 @@
+const app = getApp()
 Page({
   data: {
     loading:true,
@@ -5,7 +6,7 @@ Page({
     list:[]
   },
   PageTwo:function(){
-    this.pageRouter.navigateTo({
+    wx.redirectTo({
       url: '../second/second'
     })
   },
@@ -22,14 +23,29 @@ Page({
       })
     }, 2000);
     wx.request({
-      url: 'http://127.0.0.1:2020/result',
+      url: 'http://47.120.36.255:80/result',
       method:'POST',
       success:function(res){
-        console.log(res.data)
         that.setData({
           name:res.data[0],
           list:res.data[1]
         })
+      }
+    }),
+    wx.request({
+      url: 'http://47.120.36.255:80/content',
+      method:'POST',
+      success:function(res){
+        app.globalData.nodes = res.data[0]
+        app.globalData.links = res.data[1]
+        app.globalData.information = res.data[2]
+      }
+    }),
+    wx.request({
+      url: 'http://47.120.36.255:80/person',
+      method:'POST',
+      success:function(res){
+        app.globalData.dieases = res.data[0]
       }
     })   
   }
