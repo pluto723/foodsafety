@@ -1,7 +1,8 @@
 <!--pages/first/first.wxml-->
 <image class="base" src="/utils/images/bg.png">
   <view class="title">
-    <view >
+    <!-- 标题上的拼音 -->
+    <view>
       <view id="pinyin1" class="pinyin">shi</view>
       <view id="pinyin2" class="pinyin">suo</view>
       <view id="pinyin3" class="pinyin">suo</view>
@@ -16,9 +17,10 @@
     <view id="column-left"></view>
     <view id="right">所食</view>
   </view>
+  <!-- 图片上传按钮 -->
   <view class="btn">
     <view id="btnText">上传图片</view>
-    <button id="btn2" bindtap="takePhoto">
+    <button id="btn2" bindtap="toCropper">
     </button>
   </view>
   <bar></bar>

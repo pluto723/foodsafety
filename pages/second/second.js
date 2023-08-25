@@ -9,11 +9,13 @@ Page({
     },
     show:'',
   },
+  //关系图放大效果（网页跳转实现）
   fullShow:function () {
     this.pageRouter.navigateTo({
       url: '../full/full'
     })
   },
+  //设置网页样式
   onLoad(options) {
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
@@ -35,6 +37,19 @@ function initChart(canvas, width, height, dpr) {
   canvas.setChart(chart)
   let nodes = app.globalData.nodes
   let links = app.globalData.links
+  //获取识别后的数据并进行处理
+  let data_list = app.globalData.ingredient_list
+  console.log(data_list)
+  let node_list = []
+  let first_node = {id:"饮料", name:"饮料", val: 16, color: "red", symbol: "diamond"}
+  node_list.push(first_node)
+  for (let index = 0; index < data_list.length; index++) {
+    const element = data_list[index];
+    const item = {id:element,name:element,val:12, color:"skyblue"}
+    node_list.push(item)
+  }
+  console.log(node_list)
+
   //定义连线的颜色
   links.forEach(link => {
     link.lineStyle = {

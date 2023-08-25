@@ -1,20 +1,11 @@
 Page({
   data: {
+    src:''
   },
-  takePhoto: function () {
-    wx.chooseMedia({
-      count: 1,
-      mediaType: ['image'],
-      sourceType: ['album', 'camera'],
-      camera: 'back',
-      success:res =>{
-        this.showLoading()
-      }
-    })
-  },
-  showLoading: function() {
+  //跳转至照片裁剪页面
+  toCropper() {
     wx.redirectTo({
-      url: '../loading/loading'
+      url: '../cropper/cropper'
     })
   },
   onLoad(options) {
@@ -25,5 +16,5 @@ Page({
   },
   onShow(){
     wx.hideHomeButton()
-  }
+  },
 })

@@ -11,7 +11,9 @@
     </view>
     <image src="{{svgImg}}" id="person" mode="aspectFit"/>
   </view>
-  <view class="information">
+  <view class="information_box">
+    <view class="information_title">健康评估</view>
+    <text class="information_text">{{assess}}</text>
   </view>
   <bar></bar>
 </view>

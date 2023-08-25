@@ -5,7 +5,7 @@
     "pages/third/third",
     "pages/full/full",
     "pages/loading/loading",
-    "pages/bar/bar"
+    "pages/cropper/cropper"
   ],
   "window":{
     "backgroundTextStyle":"light",

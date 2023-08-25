@@ -9,6 +9,7 @@ App({
     nodes:'',
     links:'',
     information:'',
-    dieases:''
+    dieases:'',
+    ingredient_list:''
   },
 })

@@ -48,7 +48,7 @@
   top: 10%;
   left: 20%;
 }
-.information{
+.information_box{
   position: absolute;
   width: 90%;
   height: 25%;
@@ -58,6 +58,23 @@
   right: 0;
   margin: auto;
   border-radius: 20px;
+  overflow: auto;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 2%;
+}
+.information_title{
+  position: relative;
+  height: 15%;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+.information_text{
+  text-indent: 2rem;
+  position: relative;
+  top: -12%;
 }
 #view{
   position: relative;
