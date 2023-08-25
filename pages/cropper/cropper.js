@@ -1,21 +1,21 @@
 //获取应用实例
 const app = getApp()
+const screen_height = wx.getSystemInfoSync().windowHeight
+const screen_width = wx.getSystemInfoSync().windowWidth
 Page({
   data: {
     src: '',
-    width: 450, //宽度
-    height: 450, //高度
-    max_width: 450,
-    max_height: 450,
+    width: 200, //宽度
+    height: 200, //高度
+    max_width: 650,
+    max_height: 650,
+    min_height:20,
     disable_rotate: false, //是否禁用旋转
     disable_ratio: false, //锁定比例
-    limit_move: true, //是否限制移动
+    limit_move: false, //是否限制移动
   },
   onLoad: function (options) {
     this.cropper = this.selectComponent("#image-cropper");
-    this.setData({
-      src: options.imgSrc
-    });
     if (!options.imgSrc) {
       this.cropper.upload(); //上传图片
     }
@@ -81,7 +81,7 @@ Page({
       url: '../loading/loading'
     })
   },
-  //根据图片的内容调用API获取图片文字
+  //根据图片的内容调用API获取图片文字`
   getImgInfo: function (imageData) {
     var that = this
     that.getBaiduToken().then(res => {

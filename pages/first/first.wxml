@@ -10,7 +10,7 @@
     </view>
     <view id="column-right"></view>
     <view id="left">食所</view>
-    <view class="btn" bindtap="takePhoto">
+    <view class="btn" bindtap="toCropper">
       <view id="bg"></view>
       <view id="btn1">见</view>
     </view>

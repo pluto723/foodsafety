@@ -44,7 +44,7 @@ Page({
     var lists = string.split(/[()（）、]/).filter(item => item.trim() !== '')
     //将列表中的“食品添加剂”删除
     lists.forEach(function(item,index,arr){
-      if(item == '食品添加剂'){
+      if(item == '食品添加剂'||item == '水'){
         arr.splice(index,1)
       }
     })
