@@ -6,9 +6,8 @@ App({
     wx.setStorageSync('logs', logs)
   },
   globalData: {
-    nodes:'',
-    links:'',
     information:'',
+    benefits:'',
     dieases:'',
     ingredient_list:''
   },

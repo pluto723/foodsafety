@@ -24,7 +24,7 @@ Page({
       that.setData({
         loading:false
       })
-    }, 2000);
+    }, 1000);
     //对识别后的结果进行处理
     var initial_datas = app.globalData.ingredient_list
     var string = ''
@@ -55,31 +55,24 @@ Page({
     }),
     //将结果传给网页二
     app.globalData.ingredient_list = lists
+    //请求疾病和益处数据
     wx.request({
-      url: 'http://47.120.36.255:80/result',
-      method:'POST',
+      url: 'http://47.120.36.255/',
+      method:'GET',
       success:function(res){
-        that.setData({
-          name:res.data[0],
-          list:app.globalData.list
-        })
+        //设为全局变量，用于传给其他页面
+        app.globalData.benefits = res.data.benefit_data
+        app.globalData.diseases = res.data.disease_data
       }
-    }),
+    })
+    //请求性质数据
     wx.request({
-      url: 'http://47.120.36.255:80/content',
-      method:'POST',
+      url: 'http://47.120.36.255/quality',
+      method:'GET',
       success:function(res){
-        app.globalData.nodes = res.data[0]
-        app.globalData.links = res.data[1]
-        app.globalData.information = res.data[2]
+        //设为全局变量，用于传给其他页面
+        app.globalData.information = res.data.quality_data
       }
-    }),
-    wx.request({
-      url: 'http://47.120.36.255:80/person',
-      method:'POST',
-      success:function(res){
-        app.globalData.dieases = res.data[0]
-      }
-    })   
+    })  
   }
 })

@@ -28,6 +28,11 @@ Page({
     this.setData({
       list:app.globalData.dieases
     })
+  },
+  toScore(){
+    wx.redirectTo({
+      url: '../score/score'
+    })
   }
 })
 
