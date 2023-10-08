@@ -6,9 +6,7 @@ Page({
     ec: {
       onInit: initChart
     },
-    show: '',
-    benefit:[],
-    disease:[]
+    show: ''
   },
   //关系图放大效果（网页跳转实现）
   fullShow: function () {
@@ -71,6 +69,7 @@ function initChart(canvas, width, height, dpr) {
   let benefit = app.globalData.benefits
   let disease = app.globalData.diseases
   //在力导向图中添加疾病节点
+  let disease_list = []//用于统计该饮料可能引起的所有疾病
   for (let index = 0; index < disease.length; index++) {
     const element = disease[index].Ingredient
     const disease1 = disease[index].Dis
@@ -90,6 +89,7 @@ function initChart(canvas, width, height, dpr) {
           val: 8,
           color: "green"
         }
+        disease_list.push(disease1,disease2)
         node_list.push(add_node1)
         node_list.push(add_node2)
         const add_link1 = {
@@ -107,6 +107,7 @@ function initChart(canvas, width, height, dpr) {
       }
     }
   }
+  app.globalData.disease_list = disease_list//设置为全局变量，用于传给下一页面
   //在力导向图中添加有益节点
   for (let index = 0; index < benefit.length; index++) {
     const element = benefit[index].Ingredient

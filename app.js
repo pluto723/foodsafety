@@ -8,7 +8,8 @@ App({
   globalData: {
     information:'',
     benefits:'',
-    dieases:'',
-    ingredient_list:''
+    diseases:'',
+    ingredient_list:'',
+    disease_list:''
   },
 })

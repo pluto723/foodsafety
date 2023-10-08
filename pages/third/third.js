@@ -26,12 +26,7 @@ Page({
   onShow(){
     wx.hideHomeButton()
     this.setData({
-      list:app.globalData.dieases
-    })
-  },
-  toScore(){
-    wx.redirectTo({
-      url: '../score/score'
+      list:app.globalData.disease_list
     })
   }
 })

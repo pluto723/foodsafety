@@ -11,4 +11,8 @@
     <image class="BarImg" src="/utils/images/item3.png" mode="aspectFit"></image>
     <view class="BarText">健康评估</view>
   </view>
+  <view class="item" bindtap="PageFour">
+    <image class="BarImg" src="/utils/images/item4.png" mode="aspectFit"></image>
+    <view class="BarText">评分模型</view>
+  </view>
 </view>

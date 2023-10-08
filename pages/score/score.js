@@ -11,10 +11,11 @@ Page({
   onLoad(options) {
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
-      backgroundColor: '#dbf6fe',
+      backgroundColor: '#253334',
     })
   },
   onShow(options){
+    wx.hideHomeButton()
     var that = this
     setTimeout(function() {
       that.setData({
@@ -31,9 +32,6 @@ function initChart(canvas, width, height, dpr) {
   })
   canvas.setChart(chart)
   let option = {
-    title: {
-      text: '评分详情'
-    },
     radar: {
       indicator: [
         { name: 'Sales', max: 6500 },

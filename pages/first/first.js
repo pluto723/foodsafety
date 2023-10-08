@@ -1,6 +1,6 @@
 Page({
   data: {
-    src:''
+    src: ''
   },
   //跳转至照片裁剪页面
   toCropper() {
@@ -14,7 +14,7 @@ Page({
       backgroundColor: '#131509',
     })
   },
-  onShow(){
+  onShow() {
     wx.hideHomeButton()
   },
 })

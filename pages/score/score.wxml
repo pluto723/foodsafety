@@ -1,18 +1,13 @@
 <view class="background">
- <view class="loading" wx:if="{{loading}}">
-   <image id="top_icon" src="../../utils/images/top_icon.png" mode="aspectFit"></image>
-   <image id="loading_icon" src="../../utils/images/loading_icon.png" mode="aspectFit"></image>
-   <view class="bounce">
-     <view id="loading_text1" class="letter">正</view>
-     <view id="loading_text2" class="letter">在</view>
-     <view id="loading_text3" class="letter">评</view>
-     <view id="loading_text4" class="letter">分</view>
-   </view>
- </view>
- <view class="show" wx:if="{{!loading}}">
-  <image id="result_icon" src="../../utils/images/result.png" mode="aspectFit"></image>
+  <view class="title">
+    <view id="text1">Welcome!</view>
+    <view id="text2">这里是食品配料评分模型</view>
+  </view>
   <view class="echarts">
     <ec-canvas id="echarts" canvas-id="echarts" ec="{{ec}}"></ec-canvas>
   </view>
- </view>
+  <view class="detail">
+    <view id="detail_title">评分详情</view>
+  </view>
+  <bar></bar>
 </view>

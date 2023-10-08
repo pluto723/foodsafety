@@ -1,12 +1,11 @@
 const app = getApp()
 Page({
   data: {
-    loading:true,
-    name:'',
-    list:'',
+    loading: true,
+    list: ''
   },
   //页面跳转
-  PageTwo:function(){
+  PageTwo: function () {
     wx.redirectTo({
       url: '../second/second'
     })
@@ -16,15 +15,15 @@ Page({
     wx.hideHomeButton()
     var that = this
     wx.setNavigationBarColor({
-      frontColor: '#ffffff',
-      backgroundColor: '#a6d7ce',
-    }),
-    //计时器，设置加载时间
-    setTimeout(function() {
-      that.setData({
-        loading:false
-      })
-    }, 1000);
+        frontColor: '#ffffff',
+        backgroundColor: '#a6d7ce',
+      }),
+      //计时器，设置加载时间
+      setTimeout(function () {
+        that.setData({
+          loading: false
+        })
+      }, 1000);
     //对识别后的结果进行处理
     var initial_datas = app.globalData.ingredient_list
     var string = ''
@@ -37,29 +36,28 @@ Page({
     for (let index = 0; index < string.length; index++) {
       const element = string[index];
       if (element == ':' || element == '：') {
-        string = string.substr(index+1)
+        string = string.substr(index + 1)
       }
     }
     //将括号内的文字提取出来,并将字符串转为列表
     var lists = string.split(/[()（）、]/).filter(item => item.trim() !== '')
     //将列表中的“食品添加剂”删除
-    lists.forEach(function(item,index,arr){
-      if(item == '食品添加剂'||item == '水'){
-        arr.splice(index,1)
+    lists.forEach(function (item, index, arr) {
+      if (item == '食品添加剂' || item == '水') {
+        arr.splice(index, 1)
       }
     })
-    console.log(lists)
     //展示处理后的结果
     this.setData({
-      list:lists
-    }),
-    //将结果传给网页二
-    app.globalData.ingredient_list = lists
+        list: lists
+      }),
+      //将结果传给网页二
+      app.globalData.ingredient_list = lists
     //请求疾病和益处数据
     wx.request({
       url: 'http://47.120.36.255/',
-      method:'GET',
-      success:function(res){
+      method: 'GET',
+      success: function (res) {
         //设为全局变量，用于传给其他页面
         app.globalData.benefits = res.data.benefit_data
         app.globalData.diseases = res.data.disease_data
@@ -68,11 +66,32 @@ Page({
     //请求性质数据
     wx.request({
       url: 'http://47.120.36.255/quality',
-      method:'GET',
-      success:function(res){
+      method: 'GET',
+      success: function (res) {
         //设为全局变量，用于传给其他页面
         app.globalData.information = res.data.quality_data
       }
-    })  
+    })
+    //请求用户信息并向后端发送数据
+    wx.getUserInfo({
+      success: function (res) {
+        console.log(res.userInfo.nickName)
+        wx.request({
+          url: 'http://47.120.36.255/receive',
+          header: {
+            'content-type': 'application/json'
+          },
+          data: {
+            UserName: res.userInfo.nickName,
+            List: String(that.data.list),
+            Date:new Date(Date.parse(new Date())+ 60*60*1000*8).toISOString().substring(0,10)+ ' ' + new Date().toTimeString().substring(0,8)
+          },
+          method: 'post',
+          success: function (res) {
+            console.log(res);
+          }
+        })
+      }
+    })
   }
 })

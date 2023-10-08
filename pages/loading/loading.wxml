@@ -7,8 +7,6 @@
   <view wx:if="{{!loading}}">
     <view id="title">识别成功!</view>
     <image id="sucess" src="/utils/images/success.png" mode="aspectFit"></image>
-    <image id="drink" src="/utils/images/drink.png" mode="aspectFit"></image>
-    <view id="name">{{name}}</view>
     <image id="IngredientIcon" src="/utils/images/ingredient.png" mode="aspectFit"></image>
     <view class="list">
       <block wx:for="{{list}}" wx:key="index">

@@ -10,7 +10,6 @@
       </block>
     </view>
     <image src="{{svgImg}}" id="person" mode="aspectFit"/>
-    <button id="score" bindtap="toScore">评分</button>
   </view>
   <view class="information_box">
     <view class="information_title">健康评估</view>

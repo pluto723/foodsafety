@@ -37,37 +37,21 @@
   margin: auto;
   top: 10%;
 }
-#drink{
+
+#IngredientIcon{
   position: absolute;
   width: 10%;
   height: 15%;
   top: 35%;
   left: 20%;
 }
-#name{
-  position: absolute;
-  top: 40.5%;
-  font-size: 25px;
-  color:white;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-}
-#IngredientIcon{
-  position: absolute;
-  width: 10%;
-  height: 15%;
-  top: 45%;
-  left: 20%;
-}
 .list{
   color: white;
   position: absolute;
   width: 50%;
-  height: 30%;
+  height: 40%;
   left: 40%;
-  top: 50%;
+  top: 40%;
   font-size: 25px;
   overflow: auto;
 }
