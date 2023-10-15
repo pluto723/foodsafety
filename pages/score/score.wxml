@@ -6,8 +6,10 @@
   <view class="echarts">
     <ec-canvas id="echarts" canvas-id="echarts" ec="{{ec}}"></ec-canvas>
   </view>
-  <view class="detail">
-    <view id="detail_title">评分详情</view>
+  <view class="btn">
+    <view id="btnText1">生成健康分析报告</view>
+    <button id="btn1">
+    </button>
   </view>
   <bar></bar>
 </view>

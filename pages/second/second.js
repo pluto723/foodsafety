@@ -39,8 +39,8 @@ function initChart(canvas, width, height, dpr) {
   let link_list = []
   //根据OCR识别出来的结果生成nodes
   let first_node = {
-    id: "饮料",
-    name: "饮料",
+    id: "食品",
+    name: "食品",
     val: 16,
     color: "red",
     symbol: "diamond"
@@ -60,7 +60,7 @@ function initChart(canvas, width, height, dpr) {
   for (let index = 0; index < data_list.length; index++) {
     const element = data_list[index];
     const item = {
-      'source': '饮料',
+      'source': '食品',
       'target': element
     }
     link_list.push(item)
@@ -116,7 +116,6 @@ function initChart(canvas, width, height, dpr) {
     for(let index = 0; index < data_list.length; index++){
       const data = data_list[index]
       if(data == element){
-        console.log(benefit2)
         const add_node1 = {
           id: benefit1,
           name: benefit1,

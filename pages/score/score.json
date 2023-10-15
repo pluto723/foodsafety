@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "ec-canvas": "../../ec-canvas/ec-canvas",
-    "bar":"../../component/bar/bar"
+    "bar":"../../component/bar/bar",
+    "wxml-to-canvas": "wxml-to-canvas"
   }
 }

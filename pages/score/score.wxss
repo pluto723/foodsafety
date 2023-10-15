@@ -6,8 +6,8 @@
 }
 .echarts{
   position: absolute;
-  bottom: 55%;
-  height: 30%;
+  bottom: 50%;
+  height: 35%;
   width: 90%;
   background-color: white;
   left: 0;
@@ -33,21 +33,30 @@
   font-weight: bolder;
   text-decoration: underline;
 }
-.detail{
+#btn1{
   position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
   bottom: 15%;
-  height: 35%;
-  width: 90%;
-  background-color: white;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border-radius: 20px;
+  height: 50px;
+  border-radius: 25px;
+  opacity: 0.2;  
+  filter: alpha(opacity=20);
+  transform: scale(1);
+  width: 60%;
 }
-#detail_title{
+#btn1:active{
+  transform: scale(0.95);
+}
+#btnText1{
+  position: absolute;
   left: 0;
   right: 0;
   margin: auto;
+  bottom: 16.5%;
+  width: 50%;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-size: 23px;
+  color: white;
 }

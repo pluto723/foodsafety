@@ -34,12 +34,11 @@ function initChart(canvas, width, height, dpr) {
   let option = {
     radar: {
       indicator: [
-        { name: 'Sales', max: 6500 },
-        { name: 'Administration', max: 16000 },
-        { name: 'Information Technology', max: 30000 },
-        { name: 'Customer Support', max: 38000 },
-        { name: 'Development', max: 52000 },
-        { name: 'Marketing', max: 25000 }
+        { name: '含糖量', max: 6500 },
+        { name: '能量', max: 16000 },
+        { name: '食品添加剂剂量', max: 30000 },
+        { name: '营养成分', max: 38000 },
+        { name: '防腐剂', max: 52000 }
       ]
     },
     series: [
