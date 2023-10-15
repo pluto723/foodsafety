@@ -6,10 +6,8 @@
   <view class="echarts">
     <ec-canvas id="echarts" canvas-id="echarts" ec="{{ec}}"></ec-canvas>
   </view>
-  <view class="btn">
-    <view id="btnText1">生成健康分析报告</view>
-    <button id="btn1">
-    </button>
-  </view>
+  <button class="intro" open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:if="{{!nickName}}">点我获取分享图头像昵称</button>
+  <button class="intro" bindtap="createShareImage" wx:else>点我生成分享图</button>
+  <share-box isCanDraw="{{isCanDraw}}" bind:initData="createShareImage" />
   <bar></bar>
 </view>

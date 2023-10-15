@@ -33,30 +33,10 @@
   font-weight: bolder;
   text-decoration: underline;
 }
-#btn1{
+.intro{
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
-  bottom: 15%;
-  height: 50px;
-  border-radius: 25px;
-  opacity: 0.2;  
-  filter: alpha(opacity=20);
-  transform: scale(1);
-  width: 60%;
-}
-#btn1:active{
-  transform: scale(0.95);
-}
-#btnText1{
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  bottom: 16.5%;
-  width: 50%;
-  text-align: center;
-  font-size: 23px;
-  color: white;
+  bottom: 20%;
 }
